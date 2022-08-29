@@ -1,3 +1,3 @@
 output "vpc" {
-  value = aviatrix_vpc.default
+  value = module.mc-spoke.vpc
 }
