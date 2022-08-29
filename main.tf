@@ -2,7 +2,7 @@ module "mc-spoke" {
   source  = "terraform-aviatrix-modules/mc-spoke/aviatrix"
   name = var.name
   version = "1.3.0"
-  cloud = var.cloud
+  cloud = var.cloud[var.region]
   region = var.region
   account = var.account_name[var.region]
   cidr = var.cidr

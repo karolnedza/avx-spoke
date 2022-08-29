@@ -2,7 +2,14 @@ variable "name" {}
 
 variable "cidr" {}
 
-variable "cloud" {}
+variable "cloud" {
+  type        = map(string)
+  default     = {
+    "eu-central-1" = "aws",
+    "us-east-1" =   "aws",
+    "West Europe" = "azure"
+  }
+}
 
 variable "region" {}
 
